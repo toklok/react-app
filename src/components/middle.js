@@ -8,6 +8,11 @@ class Middle extends React.Component {
         this.dataSet = [
             { "assignee": "John Smith", "dateDue": "Dec 23rd, 2016", "risk": "High Risk", "value": "$5000", "entity": "Holland & Sherry Store" }
         ];
+
+        this.state = {
+            comments: []
+        };
+
     }
 
 
@@ -71,6 +76,10 @@ class Middle extends React.Component {
                                 </ul>
                             </section>
                             <section className="col-lg-4 col-md-4 col-sm-4">
+                            </section>
+                            <section className="col-lg-8 col-md-8 col-sm-8">
+                                <input type="text"/>
+                                <button>Send</button>
                             </section>
                         </section>
                     </section>
