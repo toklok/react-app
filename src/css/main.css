@@ -169,6 +169,25 @@ input[type=search]:focus {
     color: #3cb371;
 }
 
+.dashboard-entity {
+    padding-left: 0px;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+
+.dashboard-notifications {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: black;
+    padding: 5px 0 5px 5px;
+    color:white;
+}
+
+
 
 @media (max-width: 767px) {
 }

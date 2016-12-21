@@ -53,14 +53,14 @@ class Middle extends React.Component {
                                    <div className="col-lg-12 text-center widget-user_title"><h6>values:</h6></div>
                                    <div className="col-md-12 text-center widget-user_data"><h6>{ this.dataSet[0].value }</h6></div>
                                </section>
-                               <section className="col-lg-12">
+                               <section className="dashboard-entity">
                                    <span className="dashboard-icon"><i className="fa fa-usd" aria-hidden="true"/></span>
                                    <section className="widget-user col-lg-2">
                                        <div className="col-lg-12 text-left widget-user_title"><h6>entity:</h6></div>
                                        <div className="col-md-12 text-left widget-user_data"><h6>{ this.dataSet[0].entity }</h6></div>
                                    </section>
                                </section>
-                                    <section className="col-lg-12">
+                                    <section className="dashboard-notifications">
                                         Store <a href="#">Boston(130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.
                                     </section>
                                </section>
@@ -92,12 +92,14 @@ class Middle extends React.Component {
                                     Send</button>
                             </section>
                             <section className="col-lg-8 col-md-8 col-sm-8">
+                                <ul>
                                 {
                                     (this.state.comments.length !== 0) ? this.state.comments.map((key, index) => {
-                                        return <li>{key}</li>
+                                        return <li key={ index }>{key}</li>
                                     }) : <h3>No comments!</h3>
 
                                 }
+                                </ul>
                             </section>
                         </section>
                     </section>
