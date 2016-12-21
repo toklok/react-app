@@ -19,13 +19,40 @@ class Middle extends React.Component {
                     <section className="panel panel-default">
                         <section className="main-panel_heading"><span className="main-dashboard_span">Opportunities</span> { `${this.props.title}` }</section>
                         <section className="panel-body">
-                            { `${4 + 4}` }
-                            <h1>Maecenas eu placerat</h1>
-                            <p>Etiam aliquam sem ac velit feugiat elementum. Nunc eu elit velit, nec vestibulum nibh. Curabitur ultrices, diam non ullamcorper blandit, nunc lacus ornare nisi, egestas rutrum magna est id nunc. Pellentesque imperdiet malesuada quam, et rhoncus eros auctor eu. Nullam vehicula metus ac lacus rutrum nec fermentum urna congue. Vestibulum et risus at mi ultricies sagittis quis nec ligula. Suspendisse dignissim dignissim luctus. Duis ac dictum nibh. Etiam id massa magna. Morbi molestie posuere posuere.  </p>
-
-                            <h1>Nullam eros mi</h1>
-                            <p>Etiam aliquam sem ac velit feugiat elementum. Nunc eu elit velit, nec vestibulum nibh. Curabitur ultrices, diam non ullamcorper blandit, nunc lacus ornare nisi, egestas rutrum magna est id nunc. Pellentesque imperdiet malesuada quam, et rhoncus eros auctor eu. Nullam vehicula metus ac lacus rutrum nec fermentum urna congue. Vestibulum et risus at mi ultricies sagittis quis nec ligula. Suspendisse dignissim dignissim luctus. Duis ac dictum nibh. Etiam id massa magna. Morbi molestie posuere posuere.  </p>
-                            {/*perhaps write a story with the props or state*/}
+                           <section className="col-lg-8 col-md-8 col-sm-8">
+                                   <section className="col-lg-2">
+                                       Test
+                                   </section>
+                                   <section className="col-lg-2">
+                                       Test
+                                   </section>
+                                   <section className="col-lg-2">
+                                       Test
+                                   </section>
+                                   <section className="col-lg-2">
+                                       Test
+                                   </section>
+                                    <section className="col-lg-12">
+                                        Test
+                                    </section>
+                                    <section className="col-lg-12">
+                                        Store <a href="#">Boston(130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.
+                                    </section>
+                               </section>
+                            <section className="col-lg-4 col-md-4 col-sm-4">
+                                <section className="main-dashboard_panel">
+                                    <h1>Status</h1>
+                                </section>
+                                <section className="main-dashboard_info">
+                                    In Progress
+                                </section>
+                            </section>
+                            <section className="col-lg-8 col-md-8 col-sm-8">
+                                <h1>Test</h1>
+                            </section>
+                            <section className="col-lg-4 col-md-4 col-sm-4">
+                                <h1>Test</h1>
+                            </section>
                         </section>
                         <section style={{ color: 'blue'}} className="panel-footer">{ `${ 8 * 256 }` }</section>
                     </section>
