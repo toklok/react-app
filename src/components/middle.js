@@ -14,7 +14,7 @@ class Middle extends React.Component {
 
     render() {
         return (
-            <section className="col-lg-12 col-md-12 col-sm-12">
+            <section className="col-lg-12 col-md-12 col-sm-12 main-dashboard">
                 <section className="col-lg-8 col-md-8 col-sm-6">
                     <section className="panel panel-default">
                         <section className="panel-heading">{ `${4 + 4}` }</section>

@@ -10,7 +10,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header name="Abercrombie & Fitch" color="white" background="rgb(51,51,51)"/>
                 <Middle />
             </div>
             )
