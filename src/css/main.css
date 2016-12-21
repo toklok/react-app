@@ -141,6 +141,34 @@ input[type=search]:focus {
     color: white;
 }
 
+.dashboard-icon {
+    position: relative;
+    top: 7px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    float: left;
+    display: block;
+}
+
+.dashboard-icon i {
+    position: relative;
+    top: 25%;
+    font-size: 24px;
+    color: white;
+}
+
+.widget-user_title {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.widget-user_data {
+    color: #3cb371;
+}
+
 
 @media (max-width: 767px) {
 }
