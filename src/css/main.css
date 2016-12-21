@@ -47,7 +47,7 @@ header {
 
 .header-toolBar_ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     height: 100%;
     margin-bottom: 0;
 
@@ -74,7 +74,7 @@ header {
     color: white;
     text-align: center;
     line-height: 6;
-    width: 25%;
+    width: 15%;
 }
 
 .header-toolBar_ul-img {
@@ -90,8 +90,8 @@ input[type=search] {
 }
 
 input[type=search] {
-    background: #fff url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/magnifying-glass-icon.png) no-repeat 13px center;
-    border: solid 1px #fff;
+    background: #525151  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><circle cx='15' cy='15' r='10' /></svg>") no-repeat 6px center;
+    border: none;
     padding: 9px 10px 9px 32px;
     width: 20px;
     border-radius: 10em;
@@ -107,6 +107,8 @@ input[type=search]:focus {
 
 .header-toolBar > ul > li.header-toolBar_anim {
     width: 35%;
+    text-align: right;
+    margin-right: 20px;
     color: #333;
 }
 
