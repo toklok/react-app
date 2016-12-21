@@ -72,7 +72,7 @@ class Middle extends React.Component {
                                     In Progress
                                 </section>
                             </section>
-                            <section className="col-lg-8 col-md-8 col-sm-8">
+                            <section className="dashboard-tabControl col-lg-8 col-md-8 col-sm-8">
                                 <ul>
                                     <li>Caught Items(4)</li>
                                     <li>Best Practices(3)</li>

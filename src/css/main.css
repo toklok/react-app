@@ -187,6 +187,22 @@ input[type=search]:focus {
     color:white;
 }
 
+.dashboard-tabControl {
+
+}
+
+.dashboard-tabControl ul {
+    overflow: auto;
+    background: #7DC58E;
+}
+
+.dashboard-tabControl li {
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    line-height: 3.5;
+    float: left;
+}
 
 
 @media (max-width: 767px) {
