@@ -15,9 +15,9 @@ class Middle extends React.Component {
     render() {
         return (
             <section className="col-lg-12 col-md-12 col-sm-12 main-dashboard">
-                <section className="col-lg-8 col-md-8 col-sm-6">
+                <section className="col-lg-12 col-md-12 col-sm-12">
                     <section className="panel panel-default">
-                        <section className="panel-heading">{ `${4 + 4}` }</section>
+                        <section className="main-panel_heading"><span className="main-dashboard_span">Opportunities</span> { `${this.props.title}` }</section>
                         <section className="panel-body">
                             { `${4 + 4}` }
                             <h1>Maecenas eu placerat</h1>
@@ -28,15 +28,6 @@ class Middle extends React.Component {
                             {/*perhaps write a story with the props or state*/}
                         </section>
                         <section style={{ color: 'blue'}} className="panel-footer">{ `${ 8 * 256 }` }</section>
-                    </section>
-                </section>
-                <section className="col-lg-4 col-md-4 col-sm-6">
-                    <section className="panel panel-default">
-                        <section className="panel-heading">{ `${ 8 * 256 }` }</section>
-                        <section className="panel-body">
-                            { `${" content for your pleasure " +  4 + 4 }` }
-                        </section>
-                        <section className="panel-footer"> { `${" panel footer "}` }</section>
                     </section>
                 </section>
             </section>

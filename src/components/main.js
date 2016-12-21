@@ -11,7 +11,7 @@ class Main extends React.Component {
         return (
             <div>
                 <Header name="Abercrombie & Fitch" color="white" background="rgb(51,51,51)"/>
-                <Middle />
+                <Middle title="EV-15 High Damage Registration"/>
             </div>
             )
     }

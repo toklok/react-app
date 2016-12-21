@@ -125,6 +125,22 @@ input[type=search]:focus {
     margin-top: 2rem;
 }
 
+.main-dashboard_span:after {
+    content: '\f101 ';
+    font-family: 'FontAwesome';
+    margin: 0 5px 5px;
+}
+
+.main-panel_heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #525151;
+    font-size: 20px;
+    color: white;
+}
+
 
 @media (max-width: 767px) {
 }
