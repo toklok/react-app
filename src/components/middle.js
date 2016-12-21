@@ -1,8 +1,15 @@
 import React from 'react';
+import axios from 'axios';
 
 class Middle extends React.Component {
     constructor(props) {
         super(props);
+        this.rootURL = 'https://jsonplaceholder.typicode.com';
+    }
+
+
+    componentDidMount() {
+        axios.get(this.rootURL + '/posts/1')
     }
 
     render() {
@@ -23,7 +30,7 @@ class Middle extends React.Component {
                         <section style={{ color: 'blue'}} className="panel-footer">{ `${ 8 * 256 }` }</section>
                     </section>
                 </section>
-                <section className="col-lg-4 col-md-4 col-sm-4">
+                <section className="col-lg-4 col-md-4 col-sm-6">
                     <section className="panel panel-default">
                         <section className="panel-heading">{ `${ 8 * 256 }` }</section>
                         <section className="panel-body">
