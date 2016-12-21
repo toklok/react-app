@@ -30,7 +30,7 @@ header {
 }
 
 .header-main {
-
+    height: 75px;
 }
 
 .header-logo {
@@ -47,7 +47,7 @@ header {
 
 .header-toolBar_ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     margin-bottom: 0;
 
@@ -57,11 +57,6 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.header-toolBar_ul input[type="search"] {
-    display: none;
-    width: 50px;
 }
 
 .header-toolBar_ul i {
@@ -82,39 +77,46 @@ header {
     width: 25%;
 }
 
-.header-toolBar_ul > li:nth-child(2) > i {
-    margin-right: 15px;
-}
-
-.header-toolBar_ul li:nth-child(2) {
-    width: 50%;
-}
-
 .header-toolBar_ul-img {
     border-radius: 50%;
 }
 
-
-
 input {
-    border: 0;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-}
-
-input:focus {
     outline: none;
 }
+input[type=search] {
+    font-family: inherit;
+    font-size: 100%;
+}
 
-input[type="search"] {
-    -webkit-appearance: textfield;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+input[type=search] {
+    background: #fff url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/magnifying-glass-icon.png) no-repeat 13px center;
+    border: solid 1px #fff;
+    padding: 9px 10px 9px 32px;
+    width: 20px;
+    border-radius: 10em;
+    transition: all .5s;
+}
+
+input[type=search]:focus {
+    width: 100%;
+    background-color: #fff;
+    border-color: #d3d3d3;
+    box-shadow: 0 0 5px rgba(127,127,127, 0.8);
+}
+
+.header-toolBar > ul > li.header-toolBar_anim {
+    width: 35%;
+    color: #333;
+}
+
+.header-toolBar_anim input[type="search"] {
+    height: calc(75px / 2);
+}
+
+.header-toolBar_anim input[type="search"]:hover {
+    background-color: #d9d9d9
+;
 }
 
 .main-dashboard {
