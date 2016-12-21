@@ -4,6 +4,7 @@ import axios from 'axios';
 class Middle extends React.Component {
     constructor(props) {
         super(props);
+
         this.rootURL = 'https://jsonplaceholder.typicode.com';
         this.dataSet = [
             { "assignee": "John Smith", "dateDue": "Dec 23rd, 2016", "risk": "High Risk", "value": "$5000", "entity": "Holland & Sherry Store" }
@@ -13,6 +14,10 @@ class Middle extends React.Component {
             comments: []
         };
 
+    }
+
+    onSubmit(comment) {
+        this.setState({ comments: this.state.comments.concat(comment) });
     }
 
 
@@ -28,28 +33,28 @@ class Middle extends React.Component {
                         <section className="main-panel_heading"><span className="main-dashboard_span">Opportunities</span> { `${this.props.title}` }</section>
                         <section className="panel-body">
                            <section className="col-lg-8 col-md-8 col-sm-8">
-                               <span className="dashboard-icon"><i className="fa fa-user" aria-hidden="true"></i></span>
+                               <span className="dashboard-icon"><i className="fa fa-user" aria-hidden="true"/></span>
                                <section className="widget-user col-lg-2">
                                    <div className="col-lg-12 text-center widget-user_title"><h6>assigned to:</h6></div>
                                    <div className="col-md-12 text-center widget-user_data"><h6>{ this.dataSet[0].assignee }</h6></div>
                                </section>
-                               <span className="dashboard-icon"><i className="fa fa-calendar" aria-hidden="true"></i></span>
+                               <span className="dashboard-icon"><i className="fa fa-calendar" aria-hidden="true"/></span>
                                <section className="widget-user col-lg-2">
                                    <div className="col-lg-12 text-center widget-user_title"><h6>due date:</h6></div>
                                    <div className="col-md-12 text-center widget-user_data"><h6>{ this.dataSet[0].dateDue }</h6></div>
                                </section>
-                               <span className="dashboard-icon"><i className="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                               <span className="dashboard-icon"><i className="fa fa-exclamation-triangle" aria-hidden="true"/></span>
                                <section className="widget-user col-lg-2">
                                    <div className="col-lg-12 text-center widget-user_title"><h6>risk factor:</h6></div>
                                    <div className="col-md-12 text-center widget-user_data"><h6>{ this.dataSet[0].risk }</h6></div>
                                </section>
-                               <span className="dashboard-icon"><i className="fa fa-usd" aria-hidden="true"></i></span>
+                               <span className="dashboard-icon"><i className="fa fa-usd" aria-hidden="true"/></span>
                                <section className="widget-user col-lg-2">
                                    <div className="col-lg-12 text-center widget-user_title"><h6>values:</h6></div>
                                    <div className="col-md-12 text-center widget-user_data"><h6>{ this.dataSet[0].value }</h6></div>
                                </section>
                                <section className="col-lg-12">
-                                   <span className="dashboard-icon"><i className="fa fa-usd" aria-hidden="true"></i></span>
+                                   <span className="dashboard-icon"><i className="fa fa-usd" aria-hidden="true"/></span>
                                    <section className="widget-user col-lg-2">
                                        <div className="col-lg-12 text-left widget-user_title"><h6>entity:</h6></div>
                                        <div className="col-md-12 text-left widget-user_data"><h6>{ this.dataSet[0].entity }</h6></div>
@@ -78,8 +83,21 @@ class Middle extends React.Component {
                             <section className="col-lg-4 col-md-4 col-sm-4">
                             </section>
                             <section className="col-lg-8 col-md-8 col-sm-8">
-                                <input type="text"/>
-                                <button>Send</button>
+                                <input type="text" name="commentBox" ref="commentField" />
+                                <button onClick={
+                                    () => {
+                                        this.onSubmit(this.refs.commentField.value);
+                                    }
+                                }>
+                                    Send</button>
+                            </section>
+                            <section className="col-lg-8 col-md-8 col-sm-8">
+                                {
+                                    (this.state.comments.length !== 0) ? this.state.comments.map((key, index) => {
+                                        return <li>{key}</li>
+                                    }) : <h3>No comments!</h3>
+
+                                }
                             </section>
                         </section>
                     </section>
