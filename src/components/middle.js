@@ -20,6 +20,10 @@ class Middle extends React.Component {
         this.setState({ comments: this.state.comments.concat(comment) });
     }
 
+    removeComment(index) {
+        this.setState({ comments: this.state.comments.filter((curr, i) => i !== index) })
+    };
+
 
     componentDidMount() {
         axios.get(this.rootURL + '/posts/1')
@@ -72,6 +76,14 @@ class Middle extends React.Component {
                                     In Progress
                                 </section>
                             </section>
+                            <section className="col-lg-4 col-md-4 col-sm-4">
+                                <section className="main-dashboard_panel">
+                                    <section className="main-dashboard_title">Status</section>
+                                </section>
+                                <section className="main-dashboard_info">
+                                    In Progress
+                                </section>
+                            </section>
                             <section className="dashboard-tabControl col-lg-8 col-md-8 col-sm-8">
                                 <ul>
                                     <li>Caught Items(4)</li>
@@ -80,24 +92,25 @@ class Middle extends React.Component {
                                     <li>History</li>
                                 </ul>
                             </section>
-                            <section className="col-lg-4 col-md-4 col-sm-4">
-                            </section>
-                            <section className="col-lg-8 col-md-8 col-sm-8">
+                            <section className="col-lg-8 col-md-8 col-sm-8 dashboard-input">
                                 <input type="text" name="commentBox" ref="commentField" />
                                 <button onClick={
                                     () => {
                                         this.onSubmit(this.refs.commentField.value);
                                     }
                                 }>
-                                    Send</button>
+                                    Add Comment</button>
                             </section>
-                            <section className="col-lg-8 col-md-8 col-sm-8">
+                            <section className="col-lg-8 col-md-8 col-sm-8 dashboard-commentBoard">
                                 <ul>
                                 {
                                     (this.state.comments.length !== 0) ? this.state.comments.map((key, index) => {
-                                        return <li key={ index }>{key}</li>
+                                        return <li key={ index } className="new-item">{key}
+                                        <span style={{ float: 'right', color: 'black' }}>
+                                            <button onClick={() => { this.removeComment(index) }}>Delete</button>
+                                        </span>
+                                        </li>
                                     }) : <h3>No comments!</h3>
-
                                 }
                                 </ul>
                             </section>

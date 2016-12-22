@@ -193,6 +193,8 @@ input[type=search]:focus {
 
 .dashboard-tabControl ul {
     overflow: auto;
+    text-transform: uppercase;
+    color: whitesmoke;
     background: #7DC58E;
 }
 
@@ -201,6 +203,7 @@ input[type=search]:focus {
     height: 50px;
     text-align: center;
     line-height: 3.5;
+    text-shadow: 1px 1px 3px black;
     float: left;
 }
 
@@ -242,6 +245,42 @@ input[type=search]:focus {
     font-size: 40px;
     top: 10px;
     line-height: 0px;
+}
+
+.dashboard-commentBoard li {
+    list-style: none;
+    background: #d1703c;
+    color: #fff;
+    line-height: 2em;
+    padding: 0 0.5em;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+
+li.new-item {
+    opacity: 0;
+    animation: fadeIn .3s linear forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.dashboard-input input {
+    width: 85%;
+}
+
+
+.dashboard-input button {
+    width: 14%;
+    float: right;
 }
 
 @media (max-width: 767px) {
