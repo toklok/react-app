@@ -204,6 +204,33 @@ input[type=search]:focus {
     float: left;
 }
 
+.dashboard-tabControl li:first-child {
+    border-bottom: 4px solid #6CAC7B;
+}
+
+.dashboard-tabControl li:first-child:after {
+    content: '2';
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    line-height: 1.5;
+}
+
+.dashboard-tabControl ul > li:nth-child(2):after {
+    content: '2';
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    line-height: 1.5;
+}
 
 @media (max-width: 767px) {
 }
