@@ -142,13 +142,21 @@ input[type=search]:focus {
     margin-left: 8px;
 }
 
+.main-dashboard_title h4 {
+    color: white;
+    text-shadow: 0 1px black;
+}
+
 .main-dashboard_info {
     height: 100px;
+    box-shadow: 0px 1px 1px black;
     background: #92a3b1;
     margin-top: 1px;
 }
 
 .main-dashboard_info h1 {
+    color: white;
+    text-shadow: 0 1px black;
     margin-top: 0;
     margin-left: 5px;
 }
@@ -205,7 +213,8 @@ input[type=search]:focus {
     margin-top: 10px;
     margin-bottom: 10px;
     background: black;
-    padding: 5px 0 5px 5px;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
     color:white;
 }
 

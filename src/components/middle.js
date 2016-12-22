@@ -101,6 +101,7 @@ class Middle extends React.Component {
                                 <button onClick={
                                     () => {
                                         this.onSubmit(this.refs.commentField.value);
+                                        this.refs.commentField.value = '';
                                     }
                                 }>
                                     Add Comment</button>
@@ -114,7 +115,7 @@ class Middle extends React.Component {
                                             <button onClick={() => { this.removeComment(index) }}>Delete</button>
                                         </span>
                                         </li>
-                                    }) : <h3>No comments!</h3>
+                                    }) : <h3>No comments! :(</h3>
                                 }
                                 </ul>
                             </section>
