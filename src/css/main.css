@@ -131,6 +131,28 @@ input[type=search]:focus {
     margin: 0 5px 5px;
 }
 
+.main-dashboard_panel {
+    background: grey;
+    height: 35px;
+    box-shadow: 0px 2px 2px black;
+}
+
+.main-dashboard_title {
+    overflow: auto;
+    margin-left: 8px;
+}
+
+.main-dashboard_info {
+    height: 100px;
+    background: #92a3b1;
+    margin-top: 1px;
+}
+
+.main-dashboard_info h1 {
+    margin-top: 0;
+    margin-left: 5px;
+}
+
 .main-panel_heading {
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
@@ -187,8 +209,9 @@ input[type=search]:focus {
     color:white;
 }
 
-.dashboard-tabControl {
-
+.dashboard-rightSide {
+    height: 150px;
+    float: right;
 }
 
 .dashboard-tabControl ul {

@@ -68,20 +68,24 @@ class Middle extends React.Component {
                                         Store <a href="#">Boston(130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.
                                     </section>
                                </section>
-                            <section className="col-lg-4 col-md-4 col-sm-4">
+                            <section className="col-lg-4 col-md-4 col-sm-4 dashboard-rightSide">
                                 <section className="main-dashboard_panel">
-                                    <section className="main-dashboard_title">Status</section>
+                                    <section className="main-dashboard_title">
+                                        <h4>Status</h4>
+                                    </section>
                                 </section>
                                 <section className="main-dashboard_info">
-                                    In Progress
+                                    <h1>In Progress</h1>
                                 </section>
                             </section>
-                            <section className="col-lg-4 col-md-4 col-sm-4">
+                            <section className="col-lg-4 col-md-4 col-sm-4 dashboard-rightSide">
                                 <section className="main-dashboard_panel">
-                                    <section className="main-dashboard_title">Status</section>
+                                    <section className="main-dashboard_title">
+                                        <h4>Status</h4>
+                                    </section>
                                 </section>
                                 <section className="main-dashboard_info">
-                                    In Progress
+                                    <h1>In Progress</h1>
                                 </section>
                             </section>
                             <section className="dashboard-tabControl col-lg-8 col-md-8 col-sm-8">
