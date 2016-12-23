@@ -213,7 +213,6 @@ input[type=search]:focus {
     margin-top: 10px;
     margin-bottom: 10px;
     background: black;
-    border-radius: 3px;
     padding: 5px 5px 5px 5px;
     color:white;
 }
@@ -239,8 +238,14 @@ input[type=search]:focus {
     float: left;
 }
 
+
+.dashboard-tabControl li {
+    border-right: 1px solid black;
+    border-right-width: 1px;
+}
+
 .dashboard-tabControl li:first-child {
-    border-bottom: 4px solid #6CAC7B;
+    border-bottom: 3px solid green;
 }
 
 .dashboard-tabControl li:first-child:after {
