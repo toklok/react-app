@@ -14,20 +14,23 @@ class Middle extends React.Component {
             comments: []
         };
 
-    }
+    };
 
     onSubmit(comment) {
         this.setState({ comments: this.state.comments.concat(comment) });
-    }
+    };
 
     removeComment(index) {
-        this.setState({ comments: this.state.comments.filter((curr, i) => i !== index) })
+
+        const filtered =  this.state.comments.filter((curr, i) => i !== index);
+
+        this.setState({ comments: this.state.comments.concat(filtered) });
     };
 
 
     componentDidMount() {
         axios.get(this.rootURL + '/posts/1')
-    }
+    };
 
     render() {
         return (
@@ -102,6 +105,7 @@ class Middle extends React.Component {
                                     () => {
 
                                         (this.refs.commentField.value !== '') ? this.onSubmit(this.refs.commentField.value) : alert('Error');
+
                                         this.refs.commentField.value = '';
                                     }
                                 }>
@@ -111,10 +115,15 @@ class Middle extends React.Component {
                                 <ul>
                                 {
                                     (this.state.comments.length !== 0) ? this.state.comments.map((key, index) => {
-                                        return <li key={ index } className="new-item">{key}
-                                        <span style={{ float: 'right', color: 'black' }}>
-                                            <button onClick={() => { this.removeComment(index) }}>Delete</button>
-                                        </span>
+                                        return <li key={ index } className='new-item'>{key}
+                                            <button style={{ float: 'right', color: 'black' }} onClick={(e) => {
+                                                e.persist();
+                                                e.currentTarget.parentNode.className = 'removed-item';
+                                                e.currentTarget.parentNode.addEventListener('animationend', () => {
+                                                    this.removeComment(index, e);
+                                                });
+                                                //this.removeComment(index, e);
+                                            }}>Delete</button>
                                         </li>
                                     }) : <h3>No comments! :(</h3>
                                 }

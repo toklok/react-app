@@ -26,6 +26,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
+        new ExtractTextPlugin('main.css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
         })
@@ -47,8 +48,5 @@ module.exports = {
             { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
             { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
         ]
-    },
-    plugins: [
-        new ExtractTextPlugin('main.css')
-    ]
+    }
 }
