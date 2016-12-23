@@ -21,10 +21,7 @@ class Middle extends React.Component {
     };
 
     removeComment(index) {
-
-        const filtered =  this.state.comments.filter((curr, i) => i !== index);
-
-        this.setState({ comments: this.state.comments.concat(filtered) });
+        this.setState({ comments: this.state.comments.filter((curr, i) => i !== index) });
     };
 
 
