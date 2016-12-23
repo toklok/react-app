@@ -100,7 +100,8 @@ class Middle extends React.Component {
                                 <input type="text" name="commentBox" ref="commentField" />
                                 <button onClick={
                                     () => {
-                                        this.onSubmit(this.refs.commentField.value);
+
+                                        (this.refs.commentField.value !== '') ? this.onSubmit(this.refs.commentField.value) : alert('Error');
                                         this.refs.commentField.value = '';
                                     }
                                 }>
