@@ -64,8 +64,9 @@ class Middle extends React.Component {
                                        <div className="col-md-12 text-left widget-user_data"><h6>{ this.dataSet[0].entity }</h6></div>
                                    </section>
                                </section>
-                                    <section className="dashboard-notifications">
-                                        Store <a href="#">Boston(130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.
+                                    <section className="dashboard-notifications_alert">
+                                        <p>Store <a href="#">Boston(130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.</p>
+                                        <div>Close</div>
                                     </section>
                                </section>
                             <section className="col-lg-4 col-md-4 col-sm-4 dashboard-rightSide">
