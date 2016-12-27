@@ -1,4 +1,23 @@
-$panel-body-height: 75vh;
+/*main */
+$panel-body-height: 78vh;
+$header-icons: 2em;
+$header-icons-color: white;
+$header-height: 75px;
+$header-searchBar-color: #525151;
+$header-searchBar-hover: #d9d9d9;
+$header-serachBar-bg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><circle cx='15' cy='15' r='10' /></svg>";
+
+
+$main-panel-color: grey;
+
+$dashboard-alert-fontSize: 18px;
+
+
+$comment-boardHeight: 45vh;
+
+/* font */
+$main-font: 'Ovo', serif;
+$second-font: 'Muli', sans-serif;
 
 
 html, body {
@@ -26,14 +45,22 @@ body {
     background-color: white;
 }
 
-/* HEADER */
-
-header {
-    height: 75px;
+.widget-user{
+    padding: 0;
 }
 
-.header-main {
-    height: 75px;
+h3, h4 {
+    margin: 0;
+}
+
+h6 {
+  font-family: $main-font;
+}
+
+/* header */
+
+header {
+    height: $header-height;
 }
 
 .header-logo {
@@ -63,18 +90,16 @@ header {
 }
 
 .header-toolBar_ul i {
-    /* should be variables here */
-    font-size: 2em;
-    color: white;
+    font-size: $header-icons;
+    color: $header-icons-color;
 }
 
 .header-toolBar_ul-search {
-    font-size: 2em;
+    font-size: $header-icons;
     line-height: 3;
 }
 
 .header-toolBar_ul li {
-    color: white;
     text-align: center;
     line-height: 6;
     width: 15%;
@@ -88,12 +113,12 @@ input {
     outline: none;
 }
 input[type=search] {
-    font-family: inherit;
+    font-family: $main-font;
     font-size: 100%;
 }
 
 input[type=search] {
-    background: #525151  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><circle cx='15' cy='15' r='10' /></svg>") no-repeat 6px center;
+    background: $header-searchBar-color  url($header-serachBar-bg) no-repeat 6px center;
     border: none;
     padding: 9px 10px 9px 32px;
     width: 20px;
@@ -120,7 +145,7 @@ input[type=search]:focus {
 }
 
 .header-toolBar_anim input[type="search"]:hover {
-    background-color: #d9d9d9
+    background-color: $header-searchBar-hover;
 ;
 }
 
@@ -135,7 +160,7 @@ input[type=search]:focus {
 }
 
 .main-dashboard_panel {
-    background: grey;
+    background: $main-panel-color;
     height: 35px;
     box-shadow: 0px 2px 2px black;
 }
@@ -143,6 +168,8 @@ input[type=search]:focus {
 .main-dashboard_title {
     overflow: auto;
     margin-left: 8px;
+    position: relative;
+    top: calc(35px / 4);
 }
 
 .main-dashboard_title h4 {
@@ -180,11 +207,10 @@ input[type=search]:focus {
 
 .dashboard-icon {
     position: relative;
-    top: 7px;
     text-align: center;
     width: 50px;
     height: 50px;
-    background: black;
+    background: rgba(82, 81, 81, 0.88);
     border-radius: 50%;
     float: left;
     display: block;
@@ -197,13 +223,23 @@ input[type=search]:focus {
     color: white;
 }
 
+.widget-user {
+    width: 20%;
+    float: left;
+}
+
 .widget-user_title {
+    font-family: $main-font;
     text-transform: uppercase;
-    margin: 0;
+    padding: 0;
+    margin-left: 40px;
 }
 
 .widget-user_data {
+    font-family: $second-font;
     color: #3cb371;
+    padding: 0;
+    margin-left: 40px;
 }
 
 .dashboard-entity {
@@ -213,16 +249,28 @@ input[type=search]:focus {
     float: left;
 }
 
+.dashboard-entity .widget-user {
+    width: 80%;
+}
+
 .dashboard-notifications_alert {
     margin-top: 10px;
     width: 100%;
     float: left;
     margin-top: 10px;
+    height: 65px;
     margin-bottom: 10px;
     background: black;
     box-shadow: 0px 0px 2px 1px rgba(179, 17, 17, 0.78);
     padding: 5px 5px 5px 5px;
     color:white;
+}
+
+.dashboard-notifications_alert p {
+    font-size: $dashboard-alert-fontSize;
+    font-family: $main-font;
+    margin-bottom: 0;
+    padding: 5px;
 }
 
 .dashboard-rightSide {
@@ -234,6 +282,8 @@ input[type=search]:focus {
     overflow: auto;
     text-transform: uppercase;
     color: whitesmoke;
+    margin-bottom: 0;
+    box-shadow: 0 0 1px 1px rgba(146, 143, 143, 0.91);
     background: #7DC58E;
 }
 
@@ -242,14 +292,14 @@ input[type=search]:focus {
     height: 50px;
     text-align: center;
     line-height: 3.5;
+    font-size: 16px;
+    font-family: $second-font;
     text-shadow: 1px 1px 3px black;
     float: left;
 }
 
-
-.dashboard-tabControl li {
-    border-right: 1px solid black;
-    border-right-width: 1px;
+.dashboard-tabControl {
+    margin-bottom: 20px;
 }
 
 .dashboard-tabControl li:first-child {
@@ -261,7 +311,9 @@ input[type=search]:focus {
     width: 20px;
     height: 20px;
     background: red;
+    font-size: 14px;
     color: white;
+    box-shadow: 1px 2px 1px 0px black;
     border-radius: 50%;
     position: absolute;
     top: 3px;
@@ -271,8 +323,10 @@ input[type=search]:focus {
 .dashboard-tabControl ul > li:nth-child(2):after {
     content: '2';
     width: 20px;
+    font-size: 14px;
     height: 20px;
     background: red;
+    box-shadow: 1px 2px 1px 0px black;
     color: white;
     border-radius: 50%;
     position: absolute;
@@ -292,14 +346,23 @@ input[type=search]:focus {
     line-height: 0px;
 }
 
+.dashboard-commentBoard_list {
+  height: $comment-boardHeight;
+  background-color: rgba(219, 226, 226, 0.62);
+  padding: 10px;
+  margin-top: 13px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 1px 1px 4px 1px #aba8a8;
+};
+
 .dashboard-commentBoard li {
     list-style: none;
     background: #d1703c;
     color: #fff;
     line-height: 2em;
-    padding: 0 0.5em;
     width: 100%;
-    height: 100%;
+    padding: 10px;
     border-radius: 5px;
     margin-top:5px;
     margin-bottom: 5px;
@@ -331,11 +394,4 @@ li.new-item {
 .dashboard-input button {
     width: 14%;
     float: right;
-}
-
-@media (max-width: 767px) {
-}
-
-@media (max-width: 500px) {
-
 }

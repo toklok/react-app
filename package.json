@@ -4,6 +4,7 @@
   "description": "Show some JS, CSS, HTML skill",
   "main": "index.js",
   "scripts": {
+    "dev-server": "node wp-dev-server.js",
     "test": "N/A"
   },
   "keywords": [
